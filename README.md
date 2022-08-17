@@ -1,3 +1,12 @@
+## Informações do Fork
+
+Foi adicionado dois atributos na tabela Batch, Status e valor da liquidação.
+Foi feito 2 endpoints:
+  - GET: Busca por uma faixa de data os lotes que foram ou estão sendo liquidados, assim como o valor do desconto.
+  - PUT: Atualiza o status da liquidação ou o valor dela.
+
+Foi construido o Controler, Service e Repository para essa mudança, assim como os testes para o Controler e Service.
+
 <p align="center">
         <img src="https://avatars.githubusercontent.com/u/109238400?s=400&u=e5b242311297e5a0b1c2a7e4efd42d523c158b59&v=4">
 </p>
