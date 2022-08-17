@@ -37,6 +37,10 @@ public class BatchService implements IBatchService {
         Batch batch = batchRepo.findById(id).orElseThrow(() ->
                 new NotFoundException("Can't find batch with the informed id"));
 
+        if (batch.getDueDate().isAfter(LocalDate.now().plusWeeks(3))) {
+            throw new InvalidBatchSaleOffParam("This batch aren't in a valid due date for sale off!");
+        }
+
         if (valueDescount == null && batch.getValueDescountSaleOff() == null) {
             throw new InvalidBatchSaleOffParam("You need to inform the value of descount to start a sale off!");
         } else if(valueDescount != null && batch.getValueDescountSaleOff() == null) {

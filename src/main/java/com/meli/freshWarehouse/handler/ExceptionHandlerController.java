@@ -186,4 +186,18 @@ public class ExceptionHandlerController {
 
     }
 
+    @ExceptionHandler({InvalidBatchSaleOffParam.class})
+    public ResponseEntity<ExceptionDetails> handlerInvalidBatchSaleOff(InvalidBatchSaleOffParam ex) {
+
+        return new ResponseEntity<>(ExceptionDetails.builder()
+                .title("Error in Batch sale off!")
+                .status(HttpStatus.UNPROCESSABLE_ENTITY.value())
+                .message(ex.getMessage())
+                .localDateTime(LocalDateTime.now())
+                .build(),
+                HttpStatus.UNPROCESSABLE_ENTITY
+        );
+
+    }
+
 }
