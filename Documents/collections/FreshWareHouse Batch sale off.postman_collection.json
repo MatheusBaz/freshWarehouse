@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "d3c685c9-4458-4af6-98b5-e167ed8f8ce8",
+		"name": "FreshWareHouse Batch sale off",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Put saleOff",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/fresh-products/batch/1/sale-off?valueDescount=30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"fresh-products",
+						"batch",
+						"1",
+						"sale-off"
+					],
+					"query": [
+						{
+							"key": "valueDescount",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Saleoff",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/fresh-products/batch/list?dateFrom=2023-07-21&dateUntil=2023-07-22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"fresh-products",
+						"batch",
+						"list"
+					],
+					"query": [
+						{
+							"key": "dateFrom",
+							"value": "2023-07-21"
+						},
+						{
+							"key": "dateUntil",
+							"value": "2023-07-22"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
