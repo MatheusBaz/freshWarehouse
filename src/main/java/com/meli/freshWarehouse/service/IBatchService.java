@@ -5,7 +5,7 @@ import com.meli.freshWarehouse.model.Batch;
 
 import java.util.List;
 
-public interface IBatchService {
+public interface IBatchService{
     List<Batch> saveAll(List<Batch> batchList);
     List<DueDateResponseDto> getBySectionAndDueDate(Long sectionId, Integer amountOfDays);
     List<DueDateResponseDto> getBySectionAndDueDate(String sectionName, Integer amountOfDays);

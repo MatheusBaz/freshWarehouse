@@ -38,6 +38,12 @@ public class Batch {
     @Column(name = "due_date")
     private LocalDate dueDate;
 
+    @Column(name = "sale_off_status")
+    private String saleOffStatus;
+
+    @Column(name = "value_descount_sale_off")
+    private Double valueDescountSaleOff;
+
     @ManyToOne
     @JoinColumn(name = "id_order", nullable = false)
     private Order order;
